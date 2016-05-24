@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<title>聊天</title>
+	<script src="jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="page.css">
+</head>
+<body>
+<div class="megCtrlBox">
+	<div class="commentArea">
+		<div class='comment commitStatus'>Chat with...</div>
+		<div class="textBox">
+		<div style="height:5%;"><!-- 增加顶部距离 -->
+			</div>
+			<div id="resText" class="resText">
+			</div>
+		</div>
+	</div>
+	<div class="rightListArea animated">
+		<div class='comment absTop'><a href = "javascript:void(0)" style="color:#fff; text-decoration:none;">CODE ONCE</a></div>
+		<div class="speakerList">
+			<ul id="userList">
+			</ul>
+		</div>
+		<div class='comment absBottom'>BUGS EVERYWHERE</div>
+	</div>
+</div>
+ <div class="content">
+	<div class="contPaddingBox">
+		<div class="setIcon">
+			<input type="text" id="myname" placeholder="请输入昵称">
+			<span class="myname"></span>
+			<select name="mystatus" id="mystatus">
+				<option value="1">online</option>
+				<option value="2">leave</option>
+				<option value="3">busy</option>
+			</select>
+			<select name="" id="select">
+				<option value="0">头像1</option>
+				<option value="1">头像2</option>
+				<option value="2">头像3</option>
+				<option value="3">头像4</option>
+				<option value="4">头像5</option>
+				<option value="5">头像6</option>
+				<option value="6">头像7</option>
+				<option value="7">头像8</option>
+				<option value="8">头像9</option>
+				<option value="9">头像10</option>
+			</select>
+			<button id="toggleList" title="show/hide list">list</button>
+			<div class="emotion">
+				<span class="icon">☺</span>
+				<div class="emos hide" id="emotions">
+					<span class="title">暴漫表情</span>
+					<ul>
+						<li><img src="emo/emo01.jpg" alt="#emo01#"></li>
+						<li><img src="emo/emo02.jpg" alt="#emo02#"></li>
+						<li><img src="emo/emo03.jpg" alt="#emo03#"></li>
+						<li><img src="emo/emo04.jpg" alt="#emo04#"></li>
+						<li><img src="emo/emo05.jpg" alt="#emo05#"></li>
+						<li><img src="emo/emo06.jpg" alt="#emo06#"></li>
+						<li><img src="emo/emo07.jpg" alt="#emo07#"></li>
+						<li><img src="emo/emo11.jpg" alt="#emo11#"></li>
+						<li><img src="emo/emo12.jpg" alt="#emo12#"></li>
+						<li><img src="emo/emo13.jpg" alt="#emo13#"></li>
+						<li><img src="emo/emo14.jpg" alt="#emo14#"></li>
+						<li><img src="emo/emo15.jpg" alt="#emo15#"></li>
+						<li><img src="emo/emo16.jpg" alt="#emo16#"></li>
+						<li><img src="emo/emo17.jpg" alt="#emo17#"></li>
+						<li><img src="emo/emo31.jpg" alt="#emo31#"></li>
+						<li><img src="emo/emo32.jpg" alt="#emo32#"></li>
+						<li><img src="emo/emo33.jpg" alt="#emo33#"></li>
+						<li><img src="emo/emo34.jpg" alt="#emo34#"></li>
+						<li><img src="emo/emo35.jpg" alt="#emo35#"></li>
+						<li><img src="emo/emo36.jpg" alt="#emo36#"></li>
+						<li><img src="emo/emo37.jpg" alt="#emo37#"></li>
+						<li><img src="emo/emo41.jpg" alt="#emo41#"></li>
+						<li><img src="emo/emo42g.gif" alt="#emo42g#"></li>
+						<li><img src="emo/emo43g.gif" alt="#emo43g#"></li>
+						<li><img src="emo/emo44.jpg" alt="#emo44#"></li>
+						<li><img src="emo/emo45.jpg" alt="#emo45#"></li>
+						<li><img src="emo/emo46.jpg" alt="#emo46#"></li>
+						<li><img src="emo/emo47.jpg" alt="#emo47#"></li>
+						<li><img src="emo/emo51.jpg" alt="#emo51#"></li>
+						<li><img src="emo/emo52.jpg" alt="#emo52#"></li>
+						<li><img src="emo/emo53.jpg" alt="#emo53#"></li>
+						<li><img src="emo/emo54.jpg" alt="#emo54#"></li>
+						<li><img src="emo/emo55.jpg" alt="#emo55#"></li>
+						<li><img src="emo/emo56.jpg" alt="#emo56#"></li>
+						<li><img src="emo/emo57.jpg" alt="#emo57#"></li>
+						<li><img src="emo/emo61.jpg" alt="#emo61#"></li>
+						<li><img src="emo/emo62.jpg" alt="#emo62#"></li>
+						<li><img src="emo/emo63.jpg" alt="#emo63#"></li>
+						<li><img src="emo/emo64.jpg" alt="#emo64#"></li>
+						<li><img src="emo/emo65.jpg" alt="#emo65#"></li>
+						<li><img src="emo/emo66.jpg" alt="#emo66#"></li>
+						<li><img src="emo/emo67.jpg" alt="#emo67#"></li>
+						<li><img src="emo/emo71.jpg" alt="#emo71#"></li>
+						<li><img src="emo/emo72.jpg" alt="#emo72#"></li>
+						<li><img src="emo/emo73.jpg" alt="#emo73#"></li>
+						<li><img src="emo/emo74.jpg" alt="#emo74#"></li>
+						<li><img src="emo/emo75.jpg" alt="#emo75#"></li>
+						<li><img src="emo/emo76.jpg" alt="#emo76#"></li>
+						<li><img src="emo/emo77.jpg" alt="#emo77#"></li>
+						<li><img src="emo/emo81.jpg" alt="#emo81#"></li>
+						<li><img src="emo/emo82.jpg" alt="#emo82#"></li>
+						<li><img src="emo/emo83.jpg" alt="#emo83#"></li>
+						<li><img src="emo/emo84.jpg" alt="#emo84#"></li>
+						<li><img src="emo/emo85.jpg" alt="#emo85#"></li>
+						<li><img src="emo/emo86.jpg" alt="#emo86#"></li>
+						<li><img src="emo/emo87.jpg" alt="#emo87#"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<form id="form1" action="#">
+			<textarea name="content" id="content" placeholder="换行(Ctrl+Enter)"></textarea>
+			<input type="button" id="send" value="发送(Enter)"/>
+		</form>
+	</div>
+</div>
+<!--  参考思路: http://www.ibm.com/developerworks/library/x-ajaxxml8/  -->
+<script src='chat.js'></script>
+<script>
+	$(function(){
+		$(window).resize(function(){
+			var $listArea = $('.rightListArea');
+			if($(document).width() > 480){
+				if($listArea.hasClass('slideOutRight')){
+					$listArea.removeClass('slideOutRight').addClass('slideInRight');
+				}
+			}else{
+				$listArea.removeClass('slideInRight').addClass('slideOutRight');
+			}
+
+		});
+			})
+</script>
+</body>
+</html>
