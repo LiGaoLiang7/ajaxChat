@@ -1,9 +1,9 @@
 <?php
 	$isConnectedFlag;
 	function connect(){
-			$host = "qdm121543117.my3w.com";
-			$root = 'qdm121543117';
-			$pwd = "lgl544443";
+			$host = "host";
+			$root = 'root';
+			$pwd = "pwd";
 			global $isConnectedFlag;
 			$con = mysql_connect($host,$root,$pwd);
 			if($con == false){
