@@ -493,7 +493,9 @@
 	   		/* 滚的时候重置该人的状态，离线，并且不再输入状态 */
 	   		myStatus = "offline";
 	   		isInput = 0;
-	   		addMyselfIntoList();
+
+
+			addMyselfIntoList();
 			return '下线吗？';
 		});
 	})

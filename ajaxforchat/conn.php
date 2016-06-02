@@ -14,7 +14,8 @@
 				$isConnectedFlag = true;
 			}
 			mysql_select_db('db',$con);
-			mysql_query("set character set 'utf8'"); 	
+	     		mysql_query("set character set 'utf8'"); 	
+
 	}
 	
 	if($isConnectedFlag == false){
