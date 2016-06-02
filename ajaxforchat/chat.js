@@ -96,18 +96,14 @@
 	  			}else{
 	  				chatWithClass = "class = ''";
 	  			}
+	  			statusHtml = "<i class='online status'></i><em class='explaination'>online</em>";
 
-	  			if(now - theTime < 40000){
-	  				statusHtml = "<i class='online status'></i><em class='explaination'>online</em>";
-	  				onlineNameList.push(data[index].userName);
-	  			}
-	  			else{
-	  				var satausStr = timeFromNow(theTime);
-	  				statusHtml = "<i class='offline status'></i><em class='explaination'>"+ satausStr +"</em>";
-	  			}
 	  			if(theStoredStatus !== '' && theStoredStatus !== 'online'){
 	  				if(theStoredStatus === 'busy'){
 	  					statusHtml = "<i class='status " + theStoredStatus + "'></i><em class='explaination'>"+ "do not bother"+"</em>";
+	  				}else if(theStoredStatus === 'offline'){
+	  					var satausStr = timeFromNow(theTime);
+	  					statusHtml = "<i class='status " + theStoredStatus + "'></i><em class='explaination'>"+ satausStr +"</em>";
 	  				}else{
 	  					statusHtml = "<i class='status " + theStoredStatus + "'></i><em class='explaination'>"+ "back soon" +"</em>";
 	  				}
@@ -492,12 +488,12 @@
 				$('.emos').addClass('hide');
 			}, 500);
 		});
-
 	   /* 事件 */
-	   	window.onbeforeunload = function(event){ 
-			if(conform("确认退出？")){
-				
-			}
-			return;
-		} 
+	   	$(window).on('beforeunload', function(e) {
+	   		/* 滚的时候重置该人的状态，离线，并且不再输入状态 */
+	   		myStatus = "offline";
+	   		isInput = 0;
+	   		addMyselfIntoList();
+			return '下线吗？';
+		});
 	})

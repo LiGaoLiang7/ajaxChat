@@ -1,7 +1,8 @@
 <?php 
 	include 'conn.php';
 	header("Content-Type:text/html; charset=utf-8");
-	$nowTime = $_REQUEST['nowTime'];
+	date_default_timezone_set("Asia/Shanghai");
+	$nowTime = $_REQUEST['nowTime']; /* 同一时间从不同客户端传递上来的时间有差异,这个值需要获取服务器端的 */
 	$getSql = "SELECT * FROM myDreamList";
 	$result = mysql_query($getSql);
 

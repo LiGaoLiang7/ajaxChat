@@ -84,25 +84,25 @@ input[id="myname"]:focus {
 	overflow:auto;
 }
 /* Let's get this party started */
-	::-webkit-scrollbar {
-	    width: 8px;
-	}
-	/* Track */
-	::-webkit-scrollbar-track {
-	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-	    -webkit-border-radius: 5px;
-	    border-radius: 5px;
-	}
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-	    -webkit-border-radius: 5px;
-	    border-radius: 5px;
-	    background: rgba(255,0,0,.8); 
-	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-	}
-	::-webkit-scrollbar-thumb:window-inactive {
-		background: #b72525; 
-	}
+.resText::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.resText::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/* Handle */
+.resText::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(255,0,0,.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.resText::-webkit-scrollbar-thumb:window-inactive {
+	background: #b72525; 
+}
 .resText p{
 	position:relative;
 	margin:1.55rem 0;

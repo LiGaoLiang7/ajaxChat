@@ -13,7 +13,7 @@
 			else{
 				$isConnectedFlag = true;
 			}
-			mysql_select_db('qdm121543117_db',$con);
+			mysql_select_db('db',$con);
 			mysql_query("set character set 'utf8'"); 	
 	}
 	
