@@ -551,6 +551,26 @@ input[id="myname"]:focus {
 	-ms-transform: scale(1.5) translate(-9px,-9px);
 	-webkit-transform: scale(1.5) translate(-9px,-9px);
 }
+/* Let's get this party started */
+.emotion .emos ul::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.emotion .emos ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/* Handle */
+.emotion .emos ul::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(255,0,0,.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.emotion .emos ul::-webkit-scrollbar-thumb:window-inactive {
+	background: #b72525; 
+}
 
 
 @media screen and (min-width:480px) {
